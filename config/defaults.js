@@ -3,7 +3,7 @@ define({
   //default web map, default app color theme and more. These values can be overwritten by template configuration settings
   //and url parameters.
   "appid": "",
-  "webmap": "4b762458c7994fc08b4994a2dc76e9fc",
+  "webmap": "", //INSERT WEBMAP ID HERE
   "oauthappid": null,
   //Enter the url to the proxy if needed by the applcation. See the "Using the proxy page" help topic for details
   //developers.arcgis.com/en/javascript/jshelp/ags_proxy.html
@@ -13,7 +13,7 @@ define({
   //color theme.
   "title": "",
   "summary": "",
-  "defaultPanel": "legend",
+  "defaultPanel": "layers",  //CONTROLS DEFAULT INFO PANEL TO BE DISPLAYED
   "enableDialogModal": false,
   "dialogModalContent": "",
   "dialogModalTitle": "",
@@ -24,13 +24,13 @@ define({
   "enableHomeButton": true,
   "enableLocateButton": true,
   "enableBasemapToggle": true,
-  "enableShareDialog": true,
+  "enableShareDialog": false,
   "enableBookmarks": true,
-  "enableOverviewMap": true,
+  "enableOverviewMap": false,
   "openOverviewMap": false,
   "enableModifiedDate": true,
   "enableViewsCount": true,
-  "enableMoreInfo": true,
+  "enableMoreInfo": false,
   "enablePrintButton": false,
   "defaultBasemap": "topo",
   "nextBasemap": "hybrid",
@@ -49,18 +49,18 @@ define({
   "swipeType": "vertical",
   "swipeInvertPlacement": false,
   "hideNotesLayerPopups": true,
-  "enableInstagram": true,
+  "enableInstagram": false,
   "instagramVisible": false,
-  "enableFlickr": true,
+  "enableFlickr": false,
   "flickrVisible": false,
   "flickrSearch": "",
   "flickrTime": "",
-  "enableTwitter": true,
+  "enableTwitter": false,
   "twitterVisible": false,
   "twitterSearch": "",
-  "enableWebcams": true,
+  "enableWebcams": false,
   "webcamsVisible": false,
-  "enableYouTube": true,
+  "enableYouTube": false,
   "youtubeVisible": false,
   "youtubeSearch": "",
   "youtubeTime": "all_time", // today, this_week, this_month, all_time
@@ -95,7 +95,9 @@ define({
       "url": null
     },
     "geocode": [{
-      "url": null
+       "url": "http://sjmap.org/ArcGIS/rest/services/GoRequest/Locator/GeocodeServer", //uses SJCPW Geocoder instead of ESRI World Geocoder
+        "singleLineFieldName": "Single Line Input", //set to the Single Line Address field from SJCPW Geocoder
+        "placefinding": true
            }]
   }
 });
