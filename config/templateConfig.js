@@ -25,7 +25,7 @@ define({
   //When true the template will query arcgis.com for default settings for helper services, units etc. If you
   //want to use custom settings for units or any of the helper services set queryForOrg to false then enter
   //default values for any items you need using the helper services and units properties.
-  "queryForOrg": true,
+  "queryForOrg": false,
   //If you need localization set the localize value to true to get the localized strings
   //from the javascript/nls/resource files.
   //Note that we've included a placeholder nls folder and a resource file with one error string
